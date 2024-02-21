@@ -29,7 +29,7 @@ def generate_launch_description():
             
             ],
             parameters=[
-                # Example: {'parameter_name': value},
+               
             ],
             ),
 

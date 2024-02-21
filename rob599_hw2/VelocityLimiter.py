@@ -4,6 +4,10 @@ import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
 
+ #Types for the service call.  We only need the base type, which corresponds to the
+# Doubler.srv interface definition file.
+from rob599_msgs.srv import ApplyBrakes
+
 class VelocityLimiter(Node):
     def __init__(self):
         super().__init__('velocity_limiter')
@@ -33,25 +37,74 @@ class VelocityLimiter(Node):
         # Initialize the watchdog timer
         self.watchdog_timer = self.create_timer(self.watchdog_period / 2, self.watchdog_callback)
 
-    def velocity_callback(self, msg):
+        # Add a service server for applying brakes
+        self.brake_service = self.create_service(ApplyBrakes, 'apply_brakes', self.apply_brakes_callback)
 
-        # Update the last received message time
-        self.last_msg_time = self.get_clock().now()
+        # Attribute to track whether brakes are applied
+        self.brakes_applied = False
 
-        # Create a new Twist message for output
-        out_msg = Twist()
+        # Timer for publishing zero velocity when brakes are applied
+        self.brake_timer = None
 
-        # Limit linear velocity
-        out_msg.linear.x = max(min(msg.linear.x, self.max_linear_speed), -self.max_linear_speed)
+    def apply_brakes_callback(self, request, response):
+        self.brakes_applied = request.brakes
+
+        operation_successful = False  # Initialize a flag to track the success of the operation
+
+        if self.brakes_applied:
+            # If brakes are applied, start a timer to publish zero velocity at 10Hz
+            if not self.brake_timer:
+                self.brake_timer = self.create_timer(0.1, self.publish_zero_velocity)
+                operation_successful = True  # Consider the operation successful if the timer is started
+        else:
+            # If brakes are released, stop the timer and resume normal operation
+            if self.brake_timer:
+                self.brake_timer.cancel()
+                self.brake_timer = None
+                operation_successful = True  # Consider the operation successful if the timer is stopped
+
+        # Log the brake status and the outcome of the operation
+        self.get_logger().info(f'Brakes applied: {self.brakes_applied}, Operation successful: {operation_successful}')
+
+        # Set the success field in the response
+        response.success = operation_successful
+
+        return response
+
+    def publish_zero_velocity(self):
+        zero_msg = Twist()
+         # Limit linear velocity
+        zero_msg.linear.x = 0.0
 
         # Limit angular velocity
-        out_msg.angular.z = max(min(msg.angular.z, self.max_angular_speed), -self.max_angular_speed)
+        zero_msg.angular.z = 0.0
 
         # Publish the limited velocities
-        self.publisher.publish(out_msg)
+        self.publisher.publish(zero_msg)
 
         # Log the limited velocities
-        self.get_logger().info(f'Published limited velocities: Linear = {out_msg.linear.x:.2f}, Angular = {out_msg.angular.z:.2f}')
+        self.get_logger().info(f'Published zero velocities: Linear = {zero_msg.linear.x:.2f}, Angular = {zero_msg.angular.z:.2f}')
+
+    def velocity_callback(self, msg):
+
+        if not self.brakes_applied:
+            # Update the last received message time
+            self.last_msg_time = self.get_clock().now()
+
+            # Create a new Twist message for output
+            out_msg = Twist()
+
+            # Limit linear velocity
+            out_msg.linear.x = max(min(msg.linear.x, self.max_linear_speed), -self.max_linear_speed)
+
+            # Limit angular velocity
+            out_msg.angular.z = max(min(msg.angular.z, self.max_angular_speed), -self.max_angular_speed)
+
+            # Publish the limited velocities
+            self.publisher.publish(out_msg)
+
+            # Log the limited velocities
+            self.get_logger().info(f'Published limited velocities: Linear = {out_msg.linear.x:.2f}, Angular = {out_msg.angular.z:.2f}')
 
     def watchdog_callback(self):
             # Calculate the elapsed time since the last received message
