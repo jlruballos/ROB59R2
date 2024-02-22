@@ -1,6 +1,9 @@
+#!/usr/bin/env python3
+
 import rclpy
 from rclpy.node import Node
 from rclpy.action import ActionServer
+from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.executors import MultiThreadedExecutor
 from time import sleep
 
@@ -14,6 +17,7 @@ class NASAActionServer(Node):
             LaunchRocket,
             'launch_rocket',
             self.execute_callback,
+            callback_group=ReentrantCallbackGroup(),
             goal_callback=self.goal_callback,
             cancel_callback=self.cancel_callback
         )
@@ -37,22 +41,24 @@ class NASAActionServer(Node):
             if goal_handle.is_cancel_requested:
                 goal_handle.canceled()
                 self.get_logger().info('Rocket launch aborted.')
-                return LaunchRocket.Result(launch='Aborted')  # Return indicating launch aborted
+                # Return a result indicating the launch was aborted
+                return LaunchRocket.Result(launch=False)
 
             feedback_msg.progress = i
             self.get_logger().info(f'Countdown: {i} seconds')
             goal_handle.publish_feedback(feedback_msg)
-            sleep(1)  # Delay to simulate countdown
+            #  delay
+            sleep(1)
 
+        # If the loop completes without cancellation, the rocket is launched
         goal_handle.succeed()
         self.get_logger().info('Rocket has launched!')
-        return LaunchRocket.Result(launch='Success')  # Return indicating successful launch
+        # Return a result indicating the rocket has successfully launched
+        return LaunchRocket.Result(launch=True)
 
 def main(args=None):
     rclpy.init(args=args)
     launch_rocket_action_server = NASAActionServer()
-
-    launch_rocket_action_server.get_logger().info('NASA Action Server has been started.')
 
     # Use a MultiThreadedExecutor to enable processing goals concurrently
     executor = MultiThreadedExecutor()

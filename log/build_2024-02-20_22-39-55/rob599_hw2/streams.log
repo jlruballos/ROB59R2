@@ -1,0 +1,57 @@
+[0.545s] Invoking command in '/home/jorge/ros2_ws/src/rob599_hw2': PYTHONPATH=/home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/prefix_override:/home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/rob599_hw2 build --build-base /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build install --record /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/install.log --single-version-externally-managed
+[0.725s] running egg_info
+[0.725s] creating build/rob599_hw2/rob599_hw2.egg-info
+[0.725s] writing build/rob599_hw2/rob599_hw2.egg-info/PKG-INFO
+[0.725s] writing dependency_links to build/rob599_hw2/rob599_hw2.egg-info/dependency_links.txt
+[0.725s] writing entry points to build/rob599_hw2/rob599_hw2.egg-info/entry_points.txt
+[0.725s] writing requirements to build/rob599_hw2/rob599_hw2.egg-info/requires.txt
+[0.725s] writing top-level names to build/rob599_hw2/rob599_hw2.egg-info/top_level.txt
+[0.725s] writing manifest file 'build/rob599_hw2/rob599_hw2.egg-info/SOURCES.txt'
+[0.726s] reading manifest file 'build/rob599_hw2/rob599_hw2.egg-info/SOURCES.txt'
+[0.726s] adding license file 'LICENSE'
+[0.726s] writing manifest file 'build/rob599_hw2/rob599_hw2.egg-info/SOURCES.txt'
+[0.726s] running build
+[0.726s] running build_py
+[0.726s] creating /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build
+[0.727s] creating /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib
+[0.727s] creating /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2
+[0.727s] copying rob599_hw2/nasa_action_client.py -> /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2
+[0.727s] copying rob599_hw2/VelocityLimiter.py -> /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2
+[0.727s] copying rob599_hw2/__init__.py -> /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2
+[0.727s] copying rob599_hw2/PublishTwist.py -> /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2
+[0.727s] copying rob599_hw2/TwistChecker.py -> /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2
+[0.727s] copying rob599_hw2/nasa_action_server.py -> /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2
+[0.727s] running install
+[0.727s] running install_lib
+[0.727s] creating /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2
+[0.728s] copying /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2/nasa_action_client.py -> /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2
+[0.728s] copying /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2/VelocityLimiter.py -> /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2
+[0.728s] copying /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2/__init__.py -> /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2
+[0.728s] copying /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2/PublishTwist.py -> /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2
+[0.728s] copying /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2/TwistChecker.py -> /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2
+[0.728s] copying /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2/nasa_action_server.py -> /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2
+[0.728s] byte-compiling /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2/nasa_action_client.py to nasa_action_client.cpython-310.pyc
+[0.729s] byte-compiling /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2/VelocityLimiter.py to VelocityLimiter.cpython-310.pyc
+[0.729s] byte-compiling /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2/__init__.py to __init__.cpython-310.pyc
+[0.729s] byte-compiling /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2/PublishTwist.py to PublishTwist.cpython-310.pyc
+[0.729s] byte-compiling /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2/TwistChecker.py to TwistChecker.cpython-310.pyc
+[0.730s] byte-compiling /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2/nasa_action_server.py to nasa_action_server.cpython-310.pyc
+[0.730s] running install_data
+[0.730s] creating /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/share/ament_index
+[0.730s] creating /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/share/ament_index/resource_index
+[0.730s] creating /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/share/ament_index/resource_index/packages
+[0.730s] copying resource/rob599_hw2 -> /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/share/ament_index/resource_index/packages
+[0.730s] copying package.xml -> /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/share/rob599_hw2
+[0.731s] creating /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/share/rob599_hw2/launch
+[0.731s] copying launch/speed_limit_launch.py -> /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/share/rob599_hw2/launch
+[0.731s] copying srv/ApplyBrakes.srv -> /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/share/rob599_hw2
+[0.731s] running install_egg_info
+[0.732s] Copying build/rob599_hw2/rob599_hw2.egg-info to /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2-0.0.0-py3.10.egg-info
+[0.732s] running install_scripts
+[0.746s] Installing PublishTwist script to /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/rob599_hw2
+[0.746s] Installing TwistChecker script to /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/rob599_hw2
+[0.747s] Installing VelocityLimiter script to /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/rob599_hw2
+[0.747s] Installing nasa_action_client script to /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/rob599_hw2
+[0.747s] Installing nasa_action_server script to /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/rob599_hw2
+[0.747s] writing list of installed files to '/home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/install.log'
+[0.761s] Invoked command in '/home/jorge/ros2_ws/src/rob599_hw2' returned '0': PYTHONPATH=/home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/prefix_override:/home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/rob599_hw2 build --build-base /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build install --record /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/install.log --single-version-externally-managed

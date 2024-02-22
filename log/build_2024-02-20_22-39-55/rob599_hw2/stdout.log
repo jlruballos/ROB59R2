@@ -1,0 +1,55 @@
+running egg_info
+creating build/rob599_hw2/rob599_hw2.egg-info
+writing build/rob599_hw2/rob599_hw2.egg-info/PKG-INFO
+writing dependency_links to build/rob599_hw2/rob599_hw2.egg-info/dependency_links.txt
+writing entry points to build/rob599_hw2/rob599_hw2.egg-info/entry_points.txt
+writing requirements to build/rob599_hw2/rob599_hw2.egg-info/requires.txt
+writing top-level names to build/rob599_hw2/rob599_hw2.egg-info/top_level.txt
+writing manifest file 'build/rob599_hw2/rob599_hw2.egg-info/SOURCES.txt'
+reading manifest file 'build/rob599_hw2/rob599_hw2.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'build/rob599_hw2/rob599_hw2.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build
+creating /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib
+creating /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2
+copying rob599_hw2/nasa_action_client.py -> /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2
+copying rob599_hw2/VelocityLimiter.py -> /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2
+copying rob599_hw2/__init__.py -> /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2
+copying rob599_hw2/PublishTwist.py -> /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2
+copying rob599_hw2/TwistChecker.py -> /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2
+copying rob599_hw2/nasa_action_server.py -> /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2
+running install
+running install_lib
+creating /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2
+copying /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2/nasa_action_client.py -> /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2
+copying /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2/VelocityLimiter.py -> /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2
+copying /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2/__init__.py -> /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2
+copying /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2/PublishTwist.py -> /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2
+copying /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2/TwistChecker.py -> /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2
+copying /home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/build/lib/rob599_hw2/nasa_action_server.py -> /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2
+byte-compiling /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2/nasa_action_client.py to nasa_action_client.cpython-310.pyc
+byte-compiling /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2/VelocityLimiter.py to VelocityLimiter.cpython-310.pyc
+byte-compiling /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2/PublishTwist.py to PublishTwist.cpython-310.pyc
+byte-compiling /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2/TwistChecker.py to TwistChecker.cpython-310.pyc
+byte-compiling /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2/nasa_action_server.py to nasa_action_server.cpython-310.pyc
+running install_data
+creating /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/share/ament_index
+creating /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/share/ament_index/resource_index
+creating /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/share/ament_index/resource_index/packages
+copying resource/rob599_hw2 -> /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/share/ament_index/resource_index/packages
+copying package.xml -> /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/share/rob599_hw2
+creating /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/share/rob599_hw2/launch
+copying launch/speed_limit_launch.py -> /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/share/rob599_hw2/launch
+copying srv/ApplyBrakes.srv -> /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/share/rob599_hw2
+running install_egg_info
+Copying build/rob599_hw2/rob599_hw2.egg-info to /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/python3.10/site-packages/rob599_hw2-0.0.0-py3.10.egg-info
+running install_scripts
+Installing PublishTwist script to /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/rob599_hw2
+Installing TwistChecker script to /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/rob599_hw2
+Installing VelocityLimiter script to /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/rob599_hw2
+Installing nasa_action_client script to /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/rob599_hw2
+Installing nasa_action_server script to /home/jorge/ros2_ws/src/rob599_hw2/install/rob599_hw2/lib/rob599_hw2
+writing list of installed files to '/home/jorge/ros2_ws/src/rob599_hw2/build/rob599_hw2/install.log'

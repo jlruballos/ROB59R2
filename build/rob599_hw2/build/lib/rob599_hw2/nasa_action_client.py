@@ -29,18 +29,15 @@ class LaunchRocketClient(Node):
 
     def feedback_callback(self, feedback_msg):
         feedback = feedback_msg.feedback
-        self.get_logger().info(f'Launch progress: {feedback.progress} seconds')
+        self.get_logger().info(f'Launch progress: {feedback.progress} complete')
 
     def get_result_callback(self, future):
         result = future.result().result
-        launch_status = result.launch 
-
         if future.result().status == GoalStatus.STATUS_CANCELED:
-            self.get_logger().info(f'Launch {launch_status}')
-        elif future.result().status == GoalStatus.STATUS_SUCCEEDED:
-            self.get_logger().info(f'Launch {launch_status}')  # Print out the actual launch status
+            self.get_logger().info('Launch was canceled')
         else:
-            self.get_logger().info('Launch did not complete successfully')
+            launch_status = 'succeeded' if result.launch else 'failed or aborted'
+            self.get_logger().info(f'Launch {launch_status}')
 
     def cancel_goal(self):
         if self.goal_handle:
@@ -57,7 +54,7 @@ def main(args=None):
         countdown_time = int(sys.argv[1])
     else:
         countdown_time = 10  # Default to 10 seconds if no argument provided
-    if len(sys.argv) > 2:
+    if len(sys.argv) > 1:
         abort_time = int(sys.argv[2])
     else:
         abort_time = 999999  # Default to 999999 seconds if no argument provided
